@@ -18,7 +18,7 @@
 
 - name: Java Oracle | Install version 1.8.x
   apt:
-    name: oracle-java8-installer
+    name: openjdk-8-jdk
     state: present
     force: yes
 
@@ -26,4 +26,4 @@
   lineinfile:
     path: "/etc/environment"
     regexp: '^JAVA_HOME='
-    line: 'JAVA_HOME="/usr/lib/jvm/java-8-oracle"'
+    line: 'JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/"'
